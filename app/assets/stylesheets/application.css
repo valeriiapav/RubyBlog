@@ -1,0 +1,19 @@
+body{
+	background-color: #ebe9bc;
+	font-family: "Courier New", Courier, monospace
+}
+
+a{
+	text-decoration:  none;
+}
+
+a:hover
+{
+	text-decoration: underline overline dotted lime;
+	background-color: #c2c086;
+	color: #784040;
+}
+
+table{
+	margin-top: 20px;
+}

@@ -1,0 +1,23 @@
+<%= stylesheet_link_tag "application.css" %>
+
+<h1>Welcome! This is Valery's blog! </h1>
+<div style="text-align:center;"><%= link_to 'New article', new_article_path, {:style=>"color:red;", :class =>"css_class"}%> <img src="/images/1.png" style="max-width: 30%"></div>
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Text</th>
+    <th></th>
+  </tr>
+ 
+  <% @articles.each do |article| %>
+    <tr>
+      <td style="padding-right:10px;"><%= article.title %></td>
+      <td style="padding-right:50px;"><%= article.text %></td>
+      <td><%= link_to 'Show', article_path(article), {:style=>"color:green;", :class =>"css_class"}%></td>
+      <td><%= link_to 'Edit', edit_article_path(article), {:style=>"color:orange;", :class =>"css_class"} %></td>
+      <td><%= link_to 'Delete', article_path(article),
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+  <% end %>
+</table>
